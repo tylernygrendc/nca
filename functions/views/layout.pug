@@ -9,16 +9,35 @@ head
     link(rel="preconnect" href="https://fonts.googleapis.com")
     link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
     link(href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined&display=swap" rel="stylesheet")
     link(rel="stylesheet", href="layout.css")
     link(rel="stylesheet", href="component.css")
     link(rel="stylesheet", href=`${page}.css`)
     block styles
 body
     header
+        img#nav-button.material-icons-outlined(title="Show Menu" src="svg/menu.svg")
+        span#site-title(title="Go to Home")
         block header
     nav
-        block nav
+        button
+            img(src="svg/services.svg")
+            p Services
+        button
+            img(src="svg/clock.svg")
+            p Hours
+        button
+            img(src="svg/location.svg")
+            p Location 
+        button
+            img(src="svg/people.svg")
+            p Staff
+        button
+            img(src="svg/contact.svg")
+            p Contact
     main
         block main
+
+    block scripts
 
 

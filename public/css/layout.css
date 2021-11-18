@@ -20,6 +20,9 @@
     --surface-alt: hsl(300, 90%, 10%);
     --on-surface: hsl(0, 0%, 100%);
     --on-surface-alt: hsl(0, 0%, 100%);
+    --shadow-1px: 0 0 2px 2px rgba(0,0,0,0.6);
+    --shadow-2px: 0 0 4px 4px rgba(0,0,0,0.6);
+    --shadow-3px: 0 0 8px 8px rgba(0,0,0,0.6);
 }
 
 body{
@@ -103,7 +106,7 @@ p, .p{
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
     font-size: 1rem;
-    letter-spacing: 0.05rem;
+    letter-spacing: 0;
     line-height: 1.5;
     text-transform: none;
     text-decoration: none;
@@ -111,6 +114,7 @@ p, .p{
 }
 
 @media screen and (max-width: 600px){
+
     :root{
         --header-height: 3rem;
         --nav-width: 85vw;
@@ -174,9 +178,15 @@ p, .p{
         --aside-width: 19rem;
     }
 
-   header{
+    header{
         position: fixed;
         inset: 0 0 calc(100vh - var(--header-height)) var(--nav-width);
+    }
+
+    header #top-line {
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        display: flex; flex-direction: row; align-items: center;
     }
     
     nav{
