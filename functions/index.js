@@ -1,10 +1,13 @@
+import functions from 'firebase-functions';
 import express from 'express';
 
-const route = express();
+const app = express();
 
-route.set('views', './views');
-route.set('view engine', 'pug');
+app.set('views', './views');
+app.set('view engine', 'pug');
 
-route.get('/', (req, res) => {
-    res.render('home');
+app.get('/', (req, res) => {
+    res.render('home', {title: "Home", favicon: "home", page: "home"});
 });
+
+export const routes = functions.https.onRequest(app);

@@ -17,12 +17,9 @@
     --surface: hsl(0, 0%, 100%);
     --on-surface: hsl(300, 90%, 15%);
     --on-surface-alt: hsl(300, 15%, 25%);
-    --surface-alt: hsl(300, 90%, 10%);
-    --on-surface: hsl(0, 0%, 100%);
-    --on-surface-alt: hsl(0, 0%, 100%);
-    --shadow-1px: 0 0 2px 2px rgba(0,0,0,0.6);
-    --shadow-2px: 0 0 4px 4px rgba(0,0,0,0.6);
-    --shadow-3px: 0 0 8px 8px rgba(0,0,0,0.6);
+    --shadow-1px: 0 0 2px 1px rgba(10, 6, 6, 0.2);
+    --shadow-2px: 0 0 4px 2px rgba(0,0,0,0.2);
+    --shadow-3px: 0 0 8px 3px rgba(0,0,0,0.2);
 }
 
 body{
@@ -126,6 +123,18 @@ p, .p{
         inset: 0 0 0 calc(100vh - var(--header-height));
     }
 
+    header #top-line {
+        position: absolute;
+        inset: 0;
+        display: flex; 
+        flex-direction: row; 
+        align-items: center;
+    }
+
+    #site-title{
+        font-size: 1.5rem;
+    }
+
     nav{
         position: fixed;
         inset: 0 calc(100vw - var(--nav-width)) 0 0;
@@ -153,6 +162,18 @@ p, .p{
     header{
         position: fixed;
         inset: 0 0 calc(100vh - var(--header-height)) 0;
+    }
+
+    header #top-line {
+        position: absolute;
+        inset: 0;
+        display: flex; 
+        flex-direction: row; 
+        align-items: center;
+    }
+
+    #site-title{
+        font-size: 1.5rem;
     }
     
     nav{
@@ -185,8 +206,14 @@ p, .p{
 
     header #top-line {
         position: absolute;
-        top: 0; left: 0; right: 0;
-        display: flex; flex-direction: row; align-items: center;
+        inset: 0;
+        display: flex; 
+        flex-direction: row; 
+        align-items: center;
+    }
+
+    #site-title{
+        font-size: 1.5rem;
     }
     
     nav{
@@ -201,4 +228,31 @@ p, .p{
         grid-template-columns: 1fr var(--aside-width);
         padding: 1rem; gap: 1rem;
     }
+}
+
+#nav-button {
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+nav{
+    box-shadow: var(--shadow-1px);
+}
+
+nav #top-line * {
+    margin: 0 0.35rem
+}
+
+nav button {
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    width: 100%;
+}
+
+nav button:hover {
+    background-color: var(--primary);
+    color: var(--on-primary);
 }
