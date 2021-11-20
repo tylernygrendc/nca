@@ -1,48 +1,46 @@
-head
-    title #{ title } | Nygren Chiropractic and Acupuncture
-    link(rel="shortcut icon", href=`../../svg/${ favicon }.svg`, type="xml+svg")
+doctype html
+html(lang="en")
+    head
+        title #{ title } | Nygren Chiropractic and Acupuncture
+        link(rel="shortcut icon", href=`../../svg/${ favicon }.svg`, type="xml+svg")
 
-    meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(name="description", content=`${ description }`)
+        meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="description", content=`${ description }`)
 
-    link(rel="preconnect" href="https://fonts.googleapis.com")
-    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
-    link(href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet")
-    link(href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined&display=swap" rel="stylesheet")
-    link(rel="stylesheet", href="../../css/layout.css")
-    link(rel="stylesheet", href="../../css/component.css")
-    link(rel="stylesheet", href=`../../css/${page}.css`)
-    block styles
-body
-    header
-        #top-line
-            button#nav-button(title="Show Menu")
-                img(src="../../svg/menu.svg")
-            .image
-                img(src="../../svg/logo.svg")
-            span#site-title(title="Go to Home")
-        block banner
-    nav
-        button
-            img(src="../../svg/services.svg")
-            p Services
-        button
-            img(src="../../svg/clock.svg")
-            p Hours
-        button
-            img(src="../../svg/location.svg")
-            p Location 
-        button
-            img(src="../../svg/people.svg")
-            p Staff
-        button
-            img(src="../../svg/contact.svg")
-            p Contact
-    main
-        block main
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined&display=swap" rel="stylesheet")
+        link(rel="stylesheet", href="../../css/layout.css")
+        link(rel="stylesheet", href="../../css/component.css")
+        link(rel="stylesheet", href=`../../css/${page}.css`)
+        block styles
+    body
+        header
+            #top-line
+                button#nav-button(title="Show Menu")
+                    img(src="../../svg/menu.svg")
+                span#site-title(title="Go to Home")
+            block banner
+        nav
+            button
+                img(src="../../svg/services.svg")
+                p Services
+            button
+                img(src="../../svg/clock.svg")
+                p Hours
+            button
+                img(src="../../svg/location.svg")
+                p Location 
+            button
+                img(src="../../svg/people.svg")
+                p Staff
+            button
+                img(src="../../svg/call.svg")
+                p Contact
+        main
+            block main
 
-    script(src="../../js/layout.js") 
-    block scripts
-
-
+        script(src="../../js/layout.js") 
+        block scripts
