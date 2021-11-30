@@ -1,31 +1,34 @@
 :root{
-    --primary: hsl(300, 50%, 50%);
-    --primary-light: hsl(300, 50%, 75%);
-    --primary-dark: hsl(300, 50%, 35%);
-    --primary-desaturated: hsl(300, 15%, 50%);
-    --primary-desaturated-light: hsl(300, 25%, 75%);
+    --primary: hsl(300, 25%, 40%);
+    --primary-light: hsl(300, 25%, 55%);
+    --primary-dark: hsl(300, 25%, 25%);
+    --primary-desaturated: hsl(300, 5%, 25%);
+    --primary-desaturated-light: hsl(300, 5%, 75%);
     --on-primary: hsl(0, 0%, 100%);
-    --secondary: hsl(120, 50%, 50%);
-    --secondary-light: hsl(120, 50%, 75%);
-    --secondary-dark: hsl(120, 50%, 35%);
-    --secondary-desaturated: hsl(120, 15%, 50%);
-    --secondary-desaturated-light: hsl(120, 25%, 35%);
+    --secondary: hsl(120, 25%, 40%);
+    --secondary-light: hsl(120, 25%, 55%);
+    --secondary-dark: hsl(120, 25%, 25%);
+    --secondary-desaturated: hsl(120, 5%, 25%);
+    --secondary-desaturated-light: hsl(120, 5%, 75%);
     --on-secondary: hsl(0, 0%, 100%);
     --background: hsl(0, 0%, 100%);
-    --on-background: hsl(300, 90%, 15%);
-    --on-background-alt: hsl(300, 15%, 25%);
+    --on-background: hsl(300, 10%, 10%);
+    --on-background-alt: hsl(300, 10%, 15%);
     --surface: hsl(0, 0%, 100%);
-    --on-surface: hsl(300, 90%, 15%);
-    --on-surface-alt: hsl(300, 15%, 25%);
-    --shadow-1px: 0 0 2px 1px rgba(10, 6, 6, 0.2);
+    --on-surface: hsl(300, 10%, 10%);
+    --on-surface-alt: hsl(300, 10%, 15%);
+    --shadow-1px: 0 0 2px 1px rgba(0,0,0,0.2);
     --shadow-2px: 0 0 4px 2px rgba(0,0,0,0.2);
     --shadow-3px: 0 0 8px 3px rgba(0,0,0,0.2);
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
     cursor: default;
@@ -123,18 +126,6 @@ p, .p{
         inset: 0 0 0 calc(100vh - var(--header-height));
     }
 
-    header #top-line {
-        position: absolute;
-        inset: 0;
-        display: flex; 
-        flex-direction: row; 
-        align-items: center;
-    }
-
-    #site-title{
-        font-size: 1.5rem;
-    }
-
     nav{
         position: fixed;
         inset: 0 calc(100vw - var(--nav-width)) 0 0;
@@ -155,6 +146,7 @@ p, .p{
 
     :root{
         --header-height: 3rem;
+        --top-line-height: 3rem;
         --nav-width: 13rem;
         --aside-width: 19rem;
     }
@@ -162,18 +154,6 @@ p, .p{
     header{
         position: fixed;
         inset: 0 0 calc(100vh - var(--header-height)) 0;
-    }
-
-    header #top-line {
-        position: absolute;
-        inset: 0;
-        display: flex; 
-        flex-direction: row; 
-        align-items: center;
-    }
-
-    #site-title{
-        font-size: 1.5rem;
     }
     
     nav{
@@ -195,6 +175,7 @@ p, .p{
 
     :root{
         --header-height: 3rem;
+        --top-line-height: 3rem;
         --nav-width: 13rem;
         --aside-width: 19rem;
     }
@@ -202,18 +183,6 @@ p, .p{
     header{
         position: fixed;
         inset: 0 0 calc(100vh - var(--header-height)) var(--nav-width);
-    }
-
-    header #top-line {
-        position: absolute;
-        inset: 0;
-        display: flex; 
-        flex-direction: row; 
-        align-items: center;
-    }
-
-    #site-title{
-        font-size: 1.5rem;
     }
     
     nav{
@@ -232,27 +201,60 @@ p, .p{
 
 #nav-button {
     margin: 0;
+    padding: 0.5rem;
+    border: 0;
     border-radius: 0;
     box-shadow: none;
     background-color: transparent;
 }
 
+#schedule-button {
+    margin: 0.25rem 0.25rem 0.25rem auto;
+}
+
 nav{
     box-shadow: var(--shadow-1px);
+    background-color: var(--surface);
+    color: var(--on-surface);
 }
 
-nav #top-line * {
-    margin: 0 0.35rem
+header #top-line {
+    position: absolute;
+    inset: 0 0 calc(100vh - var(--top-line-height)) 0;
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.5rem;
 }
 
-nav button {
-    margin: 0;
-    border-radius: 0;
-    box-shadow: none;
+nav details summary,
+nav details button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     width: 100%;
+    background-color: var(--surface);
+    color: var(--on-surface);
+    box-shadow: none;
+    border: 0;
+    border-radius: 0;
+    margin: 0;
+    padding: 0.75rem;
+    font-size: 1rem;
+    cursor: pointer;
 }
 
-nav button:hover {
+nav details button {
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
+}
+
+nav details summary:hover,
+nav details button:hover {
     background-color: var(--primary);
     color: var(--on-primary);
+}
+
+nav details .material-icons-outlined  {    
+    margin-right: 0.5rem;
+    font-size: 1rem;
 }
