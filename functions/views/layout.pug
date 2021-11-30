@@ -1,119 +1,47 @@
 doctype html
 html(lang="en")
     head
-        title #{ title } | Nygren Chiropractic and Acupuncture
-        link(rel="shortcut icon", href=`../../svg/${ favicon }.svg`, type="xml+svg")
 
         meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+        title #{ title } | Nygren Chiropractic and Acupuncture
         meta(name="description", content=`${ description }`)
+        meta(name="keywords", content=`${ keywords }`)
+        link(rel="shortcut icon", href=`../../svg/favicon.svg`, type="xml+svg")
 
-        link(rel="preconnect" href="https://fonts.googleapis.com")
-        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
-        link(href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet")
-        link(href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet")
-        link(rel="stylesheet", href="../../css/layout.css")
-        link(rel="stylesheet", href="../../css/component.css")
-        link(rel="stylesheet", href=`../../css/${page}.css`)
-        block styles
-    body
-        header
-            #banner
-                block banner
-            #top-line
-                button#nav-button.material-icons-outlined(title="Show Menu") menu_open
-                span#site-title(title="Go to Home")
-                button#schedule-button(title="New Appointment") Appointment
-        nav
-            details
-                button 
-                    .material-icons-outlined info
-                    span Acupuncture
-                button 
-                    .material-icons-outlined info
-                    span Chiropractic
-                button 
-                    .material-icons-outlined info
-                    span Nutrition
-                summary 
-                    .material-icons-outlined spa
-                    span Services
-            details(open)
-                button 
-                    .material-icons-outlined schedule
-                    span Hours
-                button
-                    .material-icons-outlined place
-                    span Location
-                button
-                    .material-icons-outlined monetization_on
-                    span Pricing
-                button
-                    .material-icons-outlined people
-                    span Staff
-                summary 
-                    .material-icons-outlined storefront
-                    span About
-            details
-                button
-                    .material-icons-outlined groups
-                    span Community
-                button
-                    .material-icons-outlined file_copy
-                    span Documents
-                button
-                    .material-icons-outlined fitness_center
-                    span Exercises
-                button
-                    .material-icons-outlined restaurant
-                    span Recipes
-                button
-                    .material-icons-outlined emoji_people
-                    span Stretches
-                summary 
-                    .material-icons-outlined favorite_outline
-                    span Resources
-            details
-                button
-                    .material-icons-outlined feed
-                    span Facebook
-                button
-                    .material-icons-outlined portrait
-                    span Instagram
-                button
-                    .material-icons-outlined ondemand_video
-                    span YouTube
-                summary 
-                    .material-icons-outlined thumb_up_alt
-                    span Media
-            details
-                button
-                    .material-icons-outlined call
-                    span Call
-                button
-                    .material-icons-outlined message
-                    span Message
-                button
-                    .material-icons-outlined email
-                    span Email
-                summary 
-                    .material-icons-outlined markunread_mailbox
-                    span Contact
-            details
-                button
-                    .material-icons-outlined account_balance
-                    span Payment
-                button
-                    .material-icons-outlined lock
-                    span Privacy
-                summary 
-                    .material-icons-outlined policy
-                    span Policy
+        link(rel="stylesheet", href="../../css/fonts.css")
+        link(rel="stylesheet", media="(prefers-color-scheme: light)" href="../../css/light.css")
+        link(rel="stylesheet", media="(prefers-color-scheme: dark)" href="../../css/light.css")
+        link(rel="stylesheet", media="screen and (max-width: 599px)", href="../../css/layout-small.css")
+        link(rel="stylesheet", media="screen and (min-width: 600px) and (max-width: 1099px)", href="../../css/layout-medium.css")
+        link(rel="stylesheet", media="screen and (min-width: 1100px)", href="../../css/layout-large.css")
+
+        style.
+            body * { 
+                box-sizing: border-box; 
+            }
+
+    body(style="margin: 0; padding: 0;")
+        
+        nav: include navigation.pug
+
         main
-            article
-                block article
-            aside
-                block aside
+            header
+                #open-nav: img(src="../../svg/open-nav.svg")
+                #brand-info(href="/")
+                    #website-logo: img(src="../../svg/logo.svg")
+                    #website-title.heading-1
+                button#make-appointment
+                    img(src="../../svg/appointment.svg") 
+                    .body-1 Book
 
-        script(src="../../js/layout.js")
-        block scripts
+            article: block content
+
+            footer: block footer
+
+        aside
+
+        script.
+            if (window.innerWidth < 599) document.getElementById('website-title').innerText = "NCA";
+            else document.getElementById('website-title').innerText = "Nygren Chiropractic & Acupuncture";
