@@ -8,7 +8,7 @@ html(lang="en")
         title #{ title } | Nygren Chiropractic and Acupuncture
         meta(name="description", content=`${ description }`)
         meta(name="keywords", content=`${ keywords }`)
-        link(rel="shortcut icon", href=`../../svg/favicon.svg`, type="xml+svg")
+        link(rel="shortcut icon", href=`../../svg/nca-logo-16x16.svg`, type="xml+svg")
 
         link(rel="stylesheet", href="../../css/fonts.css")
         link(rel="stylesheet", media="(prefers-color-scheme: light)" href="../../css/light.css")
@@ -28,20 +28,22 @@ html(lang="en")
 
         main
             header
-                #open-nav: img(src="../../svg/open-nav.svg")
+                #open-nav: img(src="../../svg/open-nav-white-24x24.svg")
                 #brand-info(href="/")
-                    #website-logo: img(src="../../svg/logo.svg")
+                    #website-logo: img(src="../../svg/nca-logo-white-32x32.svg")
                     #website-title.heading-1
                 button#make-appointment
                     img(src="../../svg/appointment.svg") 
-                    .body-1 Book
-
+                    .body-1
             article: block content
-
+            aside: block aside
             footer: block footer
 
-        aside
-
         script.
-            if (window.innerWidth < 599) document.getElementById('website-title').innerText = "NCA";
-            else document.getElementById('website-title').innerText = "Nygren Chiropractic & Acupuncture";
+            if (window.innerWidth < 599) {
+                document.getElementById('website-title').innerText = "NCA";
+                document.querySelector('#make-appointment .body-1').innerText = "Book";
+            } else { 
+                document.getElementById('website-title').innerText = "Nygren Chiropractic & Acupuncture";
+                document.querySelector('#make-appointment .body-1').innerText = "New Appointment";
+            }

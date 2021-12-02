@@ -1,11 +1,11 @@
 header {
     position: fixed;
     inset: 0 0 calc(100vh - 3rem) 0;
+    z-index: 5;
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: transparent;
-
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0));
 }
 
 #open-nav{
@@ -35,6 +35,7 @@ header {
 
 #website-title {
     margin: 0 auto 0 0.5rem;
+    color: #ffffff;
 }
 
 #make-appointment {
@@ -46,4 +47,43 @@ header {
 
 #make-appointment .body-1 {
     margin-left: 0.5rem;
+}
+
+main {
+    position: absolute;
+    inset: 0;
+}
+
+article {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    grid-template-rows: auto;
+    gap: 1rem;
+}
+
+#banner {
+    grid-column: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 40vh;
+}
+
+#banner .heading-1 {
+    margin: auto 0 0.5rem 0;
+    text-shadow: 0 0 2px #000000;
+    color: #ffffff;
+}
+
+#banner .title-1 {
+    margin: 0 0 0.5rem 0;
+    text-shadow: 0 0 2px #000000;
+    color: #ffffff;
+}
+
+#banner .actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 0 auto 0;
 }
