@@ -8,7 +8,10 @@ html(lang="en")
         title #{ title } | Nygren Chiropractic and Acupuncture
         meta(name="description", content=`${ description }`)
         meta(name="keywords", content=`${ keywords }`)
-        link(rel="shortcut icon", href=`../../svg/nca-logo-16x16.svg`, type="xml+svg")
+        link(rel="shortcut icon", media="(prefers-color-scheme: light)", href=`../../svg/nca-logo-black-16x16.svg`, type="xml+svg")
+        link(rel="shortcut icon", media="(prefers-color-scheme: dark)", href=`../../svg/nca-logo-white-16x16.svg`, type="xml+svg")
+
+        link(rel="preload" as="image" href="../../jpg/banner.jpg")
 
         link(rel="stylesheet", href="../../css/fonts.css")
         link(rel="stylesheet", media="(prefers-color-scheme: light)" href="../../css/light.css")
@@ -37,7 +40,6 @@ html(lang="en")
                     .body-1
             article: block content
             aside: block aside
-            footer: block footer
 
         script.
             if (window.innerWidth < 599) {
