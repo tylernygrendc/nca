@@ -1,23 +1,23 @@
 :root{
-    --primary: hsl(300, 50%, 50%);
-    --primary-light: hsl(300, 50%, 75%);
-    --primary-dark: hsl(300, 50%, 35%);
-    --primary-desaturated: hsl(300, 15%, 50%);
-    --primary-desaturated-light: hsl(300, 25%, 75%);
+    --primary: hsl(300, 25%, 25%);
+    --primary-light: hsl(300, 25%, 40%);
+    --primary-dark: hsl(300, 25%, 10%);
+    --primary-desaturated: hsl(300, 5%, 60%);
+    --primary-desaturated-light: hsl(300, 5%, 75%);
     --on-primary: hsl(0, 0%, 100%);
-    --secondary: hsl(120, 50%, 50%);
-    --secondary-light: hsl(120, 50%, 75%);
-    --secondary-dark: hsl(120, 50%, 35%);
-    --secondary-desaturated: hsl(120, 15%, 50%);
-    --secondary-desaturated-light: hsl(120, 25%, 35%);
+    --secondary: hsl(120, 25%, 25%);
+    --secondary-light: hsl(120, 25%, 40%);
+    --secondary-dark: hsl(120, 25%, 10%);
+    --secondary-desaturated: hsl(120, 5%, 60%);
+    --secondary-desaturated-light: hsl(120, 5%, 75%);
     --on-secondary: hsl(0, 0%, 100%);
     --background: hsl(0, 0%, 100%);
-    --on-background: hsl(300, 90%, 15%);
-    --on-background-alt: hsl(300, 15%, 25%);
+    --on-background: hsl(300, 10%, 5%);
+    --on-background-alt: hsl(300, 10%, 15%);
     --surface: hsl(0, 0%, 100%);
-    --on-surface: hsl(300, 90%, 15%);
-    --on-surface-alt: hsl(300, 15%, 25%);
-    --shadow-1px: 0 0 2px 1px rgba(10, 6, 6, 0.2);
+    --on-surface: hsl(300, 10%, 5%);
+    --on-surface-alt: hsl(300, 10%, 15%);
+    --shadow-1px: 0 0 2px 1px rgba(0,0,0,0.2);
     --shadow-2px: 0 0 4px 2px rgba(0,0,0,0.2);
     --shadow-3px: 0 0 8px 3px rgba(0,0,0,0.2);
 }
@@ -41,7 +41,6 @@ h1, .h1{
     line-height: 1.5;
     text-transform: none;
     text-decoration: none;
-    cursor: text;
 }
 
 h2, h2{
@@ -52,7 +51,6 @@ h2, h2{
     line-height: 1.5;
     text-transform: none;
     text-decoration: none;
-    cursor: text;
 }
 
 h3, .h3{
@@ -63,7 +61,6 @@ h3, .h3{
     line-height: 1.5;
     text-transform: none;
     text-decoration: none;
-    cursor: text;
 }
 
 h4 .h4{
@@ -74,7 +71,6 @@ h4 .h4{
     line-height: 1.5;
     text-transform: none;
     text-decoration: none;
-    cursor: text;
 }
 
 h5, .h5{
@@ -85,7 +81,6 @@ h5, .h5{
     line-height: 1.5;
     text-transform: none;
     text-decoration: none;
-    cursor: text;
 }
 
 h6, .h6{
@@ -96,7 +91,6 @@ h6, .h6{
     line-height: 1.5;
     text-transform: none;
     text-decoration: none;
-    cursor: text;
 }
 
 p, .p{
@@ -107,7 +101,6 @@ p, .p{
     line-height: 1.5;
     text-transform: none;
     text-decoration: none;
-    cursor: text;
 }
 
 @media screen and (max-width: 600px){
@@ -120,7 +113,7 @@ p, .p{
 
     header{
         position: fixed;
-        inset: 0 0 0 calc(100vh - var(--header-height));
+        inset: 0 0 calc(100vh - var(--header-height)) 0;
     }
 
     header #top-line {
@@ -133,6 +126,7 @@ p, .p{
 
     #site-title{
         font-size: 1.5rem;
+        cursor: pointer;
     }
 
     nav{
@@ -144,10 +138,6 @@ p, .p{
     main{
         position: fixed;
         inset: var(--header-height) 0 0 0;
-    }
-
-    main aside{
-        display: none;
     }
 }
 
@@ -174,6 +164,7 @@ p, .p{
 
     #site-title{
         font-size: 1.5rem;
+        cursor: pointer;
     }
     
     nav{
@@ -212,8 +203,9 @@ p, .p{
         align-items: center;
     }
 
-    #site-title{
+    #site-title {
         font-size: 1.5rem;
+        cursor: pointer;
     }
     
     nav{
