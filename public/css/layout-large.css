@@ -1,0 +1,130 @@
+:root{
+    --nav-width: 200px;
+}
+
+header {
+    position: absolute;
+    inset: 0 0 calc(100vh - 3rem) 0;
+    z-index: 5;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0));
+}
+
+#open-nav{
+    height: 1.5rem;
+    width: 1.5rem;
+    margin: 0 0.5rem;
+    display: none;
+}
+
+#brand-info {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#website-logo {
+    height: 2rem;
+    width: 2rem;
+    margin: 0 0.5rem 0 auto;
+    border-radius: 50%;
+    box-shadow: 0 0 2px #000000;
+}
+
+#website-logo img {
+    height: 100%;
+    width: 100%;
+}
+
+#website-title {
+    margin: 0 auto 0 0.5rem;
+    text-shadow:0 0 2px #000000;
+    color: #ffffff;
+    font-weight: bolder;
+}
+
+#make-appointment {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 0.5rem 0 auto;
+}
+
+#make-appointment .body-1 {
+    margin-left: 0.5rem;
+}
+
+nav {
+    position: fixed;
+    inset: 0 calc(100vw - var(--nav-width)) 0 0;
+    box-shadow: 0 0 4px rgba(0,0,0,0.4);
+}
+
+main {
+    position: fixed;
+    inset: 0 0 0 var(--nav-width);
+    overflow-y: scroll;
+}
+
+article {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    grid-template-rows: auto;
+    gap: 1rem;
+}
+
+section {
+    grid-column-start: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+section h2 {
+    text-align: center;
+}
+
+section p {
+    text-align: justify;
+}
+
+#banner {
+    grid-column: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 55vh;
+    padding: 0;
+}
+
+#banner .subtitle-1 {
+    margin: auto 0 1rem 0;
+    text-shadow: 0 0 2px #000000;
+    color: #ffffff;
+}
+
+#banner .title-1 {
+    margin: 0 0 1rem 0;
+    text-shadow: 0 0 2px #000000;
+    color: #ffffff;
+}
+
+#banner .actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 0 auto 0;
+}
+
+#banner .actions a {
+    margin: 0.5rem;
+}
+
+#banner .actions button {
+    margin: 0.5rem;
+}
