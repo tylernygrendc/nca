@@ -1,13 +1,18 @@
 @font-face {
     font-family: "Open Sans";
-    src: url("../ttf/OpenSans.ttf");
+    src: url("../ttf/Open Sans.ttf");
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../ttf/Roboto.ttf");
 }
 
 h1, .title-1 {
     font-family: "Open Sans", sans-serif;
     font-size: 2.5rem;
     font-weight: lighter;
-    letter-spacing: 0.05rem;
+    
     line-height: 1.5;
     text-transform: none;
     text-decoration: none;
@@ -18,7 +23,6 @@ h2, .title-2 {
     font-family: "Open Sans", sans-serif;
     font-size: 2.25rem;
     font-weight: lighter;
-    letter-spacing: 0.05rem;
     line-height: 1.5;
     text-transform: none;
     text-decoration: none;
@@ -29,7 +33,6 @@ h3, .subtitle-1 {
     font-family: "Open Sans", sans-serif;
     font-size: 2rem;
     font-weight: lighter;
-    letter-spacing: 0.05rem;
     line-height: 1.5;
     text-transform: none;
     text-decoration: none;
@@ -40,7 +43,6 @@ h4, .subtitle-2 {
     font-family: "Open Sans", sans-serif;
     font-size: 1.75rem;
     font-weight: lighter;
-    letter-spacing: 0.05rem;
     line-height: 1.5;
     text-transform: none;
     text-decoration: none;
@@ -51,7 +53,6 @@ h5, .heading-1 {
     font-family: "Open Sans", sans-serif;
     font-size: 1.5rem;
     font-weight: lighter;
-    letter-spacing: 0.05rem;
     line-height: 1.5;
     text-transform: none;
     text-decoration: none;
@@ -62,7 +63,6 @@ h6, .heading-2 {
     font-family: "Open Sans", sans-serif;
     font-size: 1.25rem;
     font-weight: lighter;
-    letter-spacing: 0.05rem;
     line-height: 1.5;
     text-transform: none;
     text-decoration: none;
@@ -70,9 +70,8 @@ h6, .heading-2 {
 }
 
 p, .body-1 {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 1rem;
-    letter-spacing: 0;
     line-height: 2;
     text-transform: none;
     text-decoration: none;
@@ -80,9 +79,8 @@ p, .body-1 {
 }
 
 .body-2 {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 0.85rem;
-    letter-spacing: 0;
     line-height: 2;
     text-transform: none;
     text-decoration: none;
