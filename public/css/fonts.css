@@ -78,7 +78,7 @@ p, .body-1 {
     cursor: text;
 }
 
-.body-2 {
+figcaption, label, .body-2 {
     font-family: "Roboto", sans-serif;
     font-size: 0.85rem;
     line-height: 2;
