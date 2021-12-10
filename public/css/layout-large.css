@@ -139,3 +139,30 @@ section figure figcaption {
 #service-list h2{
     text-align: center;
 }
+#staff-list .profile {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 1rem;
+}
+
+#staff-list .profile-image {
+    overflow: hidden;
+}
+
+#staff-list .profile-image img {
+    width: 120px;
+    height: 120px;
+}
+
+#staff-list .profile-text {
+    margin: auto 0;
+}
+
+#staff-list .profile-text h2 {
+    margin: 0;
+}
+
+#staff-list .profile-text span {
+    display: block;
+    margin: 0;
+}
