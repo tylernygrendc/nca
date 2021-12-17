@@ -12,11 +12,9 @@ h1, .title-1 {
     font-family: "Open Sans", sans-serif;
     font-size: 2.5rem;
     font-weight: lighter;
-    
     line-height: 1.5;
     text-transform: none;
     text-decoration: none;
-    cursor: text;
 }
 
 h2, .title-2 {
@@ -26,7 +24,6 @@ h2, .title-2 {
     line-height: 1.5;
     text-transform: none;
     text-decoration: none;
-    cursor: text;
 }
 
 h3, .subtitle-1 {
@@ -36,7 +33,6 @@ h3, .subtitle-1 {
     line-height: 1.5;
     text-transform: none;
     text-decoration: none;
-    cursor: text;
 }
 
 h4, .subtitle-2 {
@@ -46,7 +42,6 @@ h4, .subtitle-2 {
     line-height: 1.5;
     text-transform: none;
     text-decoration: none;
-    cursor: text;
 }
 
 h5, .heading-1 {
@@ -56,7 +51,6 @@ h5, .heading-1 {
     line-height: 1.5;
     text-transform: none;
     text-decoration: none;
-    cursor: text;
 }
 
 h6, .heading-2 {
@@ -66,7 +60,6 @@ h6, .heading-2 {
     line-height: 1.5;
     text-transform: none;
     text-decoration: none;
-    cursor: text;
 }
 
 p, .body-1 {
@@ -75,7 +68,6 @@ p, .body-1 {
     line-height: 2;
     text-transform: none;
     text-decoration: none;
-    cursor: text;
 }
 
 figcaption, label, .body-2 {
@@ -84,6 +76,5 @@ figcaption, label, .body-2 {
     line-height: 2;
     text-transform: none;
     text-decoration: none;
-    cursor: text;
 }
 
