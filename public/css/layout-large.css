@@ -37,6 +37,7 @@ nav {
 nav .item {
     display: flex;
     flex-direction: row;
+    align-items: center;
     width: 100%;
     padding: 0.25rem 0.5rem 0.25rem 1rem;
     cursor: pointer;
@@ -101,7 +102,6 @@ header {
 
 #website-title {
     margin: 0 auto 0 0.5rem;
-    text-shadow:0 0 2px #000000;
     color: #ffffff;
 }
 
@@ -214,14 +214,26 @@ section figure figcaption {
 }
 
 #location-and-hours .hours {
+    display: grid;
+    grid-template-rows: minmax(0,1fr) 1fr minmax(0,1fr);
+    height: 350px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    text-align: center;
 }
 
 #location-and-hours .hours table {
+    grid-row: 2/3;
     margin: auto;
+    padding: 8px;
+    border: 0;
+    border-radius: 0.5rem;
     color: white;
     background-color: rgba(0,0,0,0.4);
+    text-shadow: 0 0 4px rgba(0,0,0,0.4);
+}
+
+#location-and-hours .hours table tr td {
+    min-width: 50px;
+    text-transform: uppercase;
 }

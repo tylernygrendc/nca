@@ -70,6 +70,27 @@ p, .body-1 {
     text-decoration: none;
 }
 
+.center {
+    text-align: center;
+}
+
+.embossed {
+    text-shadow: 0 0 2px rgba(0,0,0,0.4);
+}
+
+.i {
+    font-style: italic;
+}
+
+.b {
+    font-weight: bolder;
+}
+
+.u {
+    text-decoration: underline;
+}
+
+
 figcaption, label, .body-2 {
     font-family: "Roboto", sans-serif;
     font-size: 0.85rem;
