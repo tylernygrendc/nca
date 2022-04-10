@@ -1,0 +1,24 @@
+doctype html
+html(lang="en")
+    head
+        include license
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="description", content="Nygren Chiropractic & Acupuncture is a family clinic in Van Wert, Ohio offering conservative treatment options for back pain, neck pain, joint pain, and headaches.")
+
+        title #{ title } - Nygren Chiropractic & Acupuncture
+        link(rel="shortcut icon", media="(prefers-color-scheme: light)", href="../../svg/nca-logo-light.svg", type="image/svg+xml")
+        link(rel="shortcut icon", media="(prefers-color-scheme: dark)", href="../../svg/nca-logo-dark.svg", type="image/svg+xml")
+
+        block styles
+            link(rel="stylesheet", href="../../css/utility.css")
+            link(rel="stylesheet", href="../../css/global.css")
+
+    body 
+
+        block body
+        
+        block scripts
+            script(defer, src="../../js/utility.css")
+            script(defer, src="../../js/global.css")
+

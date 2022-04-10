@@ -1,0 +1,372 @@
+/* 
+
+Copyright 2022 Tyler Nygren
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+*/
+
+@media screen and (max-width: 600px) {
+    body { font-size: 0.9rem; }
+}
+
+@media screen and (min-width: 600px) {
+    body { font-size: 1rem; }
+}
+
+article {
+    display: block;
+    width: 100vw;
+}
+
+section {
+    width: 100vw;
+    margin: 0;
+    background-color: var(--background-color);
+}
+
+footer {
+    width: 100vw;
+    padding: 1rem 2rem 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--primary-color);
+    color: var(--on-primary);
+}
+
+.parallax-container{
+    position: relative;
+    width: 100%;
+    min-height: 50vh;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0,0,0,0.15);
+}
+
+.parallax-image {
+    display: block;
+    position: absolute;
+    top: -25%;
+    width: 100%;
+    height: 150%;
+    object-position: center;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.card {
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-1);
+    background-color: var(--background-color);    
+}   
+
+.listing-with-image-left {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.listing-with-image-left img {
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.listing-with-image-left .text {
+    display: block;
+}
+
+@media screen and (max-width: 1000px){
+    .listing-with-image-left {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .listing-with-image-left img {
+        height: 200px; 
+        width: 100%;
+    }
+
+    .listing-with-image-left .text {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    .listing-with-image-left {
+        width: 100%;
+        padding: 1rem 15%;
+    }
+
+    .listing-with-image-left img {
+        height: 100%; 
+        margin: 1rem;
+        flex-grow: 1;
+    }
+    .listing-with-image-left .text {
+        width: 66%;
+        margin: 1rem;
+    }
+    .listing-with-image-left .text * {
+        margin: 1rem 0 1rem 0;
+    }
+}
+
+.listing-with-image-right {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    align-items: flex-end;
+}
+
+.listing-with-image-right img {
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.listing-with-image-right .text {
+    display: block;
+}
+
+@media screen and (max-width: 1000px){
+    .listing-with-image-right {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .listing-with-image-right img {
+        height: 200px; 
+        width: 100%;
+    }
+
+    .listing-with-image-right .text {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    .listing-with-image-right {
+        width: 100%;
+        padding: 1rem 15%;
+    }
+
+    .listing-with-image-right img {
+        height: 100%; 
+        margin: 1rem;
+        flex-grow: 1;
+    }
+
+    .listing-with-image-right .text {
+        width: 66%;
+        margin: 1rem;
+    }
+
+    .listing-with-image-right .text * {
+        width: 100%;
+        margin: 1rem 0 1rem 0;
+    }
+}
+
+/* PRIMARY NAVIGATION & HEADER */
+
+#nav-bar {
+    position: fixed;
+    inset: 0 0 auto 0;
+    height: 80px;
+    padding: 16px;
+    z-index: 10;
+    background-color: var(--background-color);
+    box-shadow: var(--shadow-2);
+}
+
+#nav-bar #nav-button--open,
+#nav-bar #nav-button--close {
+    position: absolute;
+    inset: 50% 24px auto auto;
+    transform: translateY(-50%);
+    box-sizing: content-box;
+    padding: 8px;
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+
+#nav-bar #nav-button--open:hover,
+#nav-bar #nav-button--close:hover {
+    transition: var(--shade-in);
+    background-color: rgba(0,0,0,0.15);
+}
+
+#primary-nav {
+    position: fixed;
+    inset: 8px 16px auto auto;
+    width: 200px;
+    max-height: 90vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 60px 0 var(--radius) 0;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-2);
+    background-color: var(--background-color);
+}
+
+#primary-nav a{
+    padding: 0.5em 1em;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: capitalize;
+    letter-spacing: 0;
+    color: var(--on-background);
+}
+
+#primary-nav a:hover{
+    transition: var(--shade-in);
+    background-color: rgba(0,0,0,0.15);
+}
+
+/* SITE HEADER */
+
+@media screen and (max-width: 1000px) {
+    #site-header .parallax-overlay {
+        padding: 2rem 1rem;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #site-header .parallax-overlay {
+        padding: 2rem 15% 2rem 15%;
+    }
+}
+
+/* PHILOSOPHY SECTION */
+
+#philosophy {
+    display: flex;
+    flex-direction: column;
+    min-height: 30vh;
+}
+
+@media screen and (max-width: 1000px) {
+    #philosophy {
+        align-items: center;
+        padding: 2rem 1rem;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #philosophy {
+        align-items: flex-start;
+        padding: 2rem 15vw 4rem 15vw;
+    }
+}
+
+/* SERVICE LIST SECTION */
+
+#services {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* HOURS & LOCATION SECTION */
+
+#hours {
+    display: grid;
+    grid-template-columns: 12ch 1fr;
+    gap: 0.5em;
+    justify-content: flex-start;
+}
+
+@media screen and (max-width: 1000px) {
+    #location-and-hours {
+        height: 600px;
+    }
+
+    #location-and-hours .parallax-overlay .card .vertical-divider {
+        width: 100%;
+        margin: 2rem 0;
+        align-self: center;
+        border-bottom: 1px dotted #222;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #location-and-hours .parallax-overlay .card .vertical-divider {
+        height: 100%;
+        margin: 0 2rem;
+        align-self: center;
+        border-left: 1px dotted #222;
+    }
+}
+
+/* STAFF SECTION */
+
+#staff {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#memorial{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+}
+
+#memorial .card {
+    max-width: 60ch;
+    grid-column: 2/3;
+    justify-self: center;
+}
+
+@media screen and (max-width: 1000px) {
+    #memorial .card {
+        max-width: 60ch;
+        grid-column: 1/3;
+        justify-self: center;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #memorial .card {
+        max-width: 60ch;
+        grid-column: 2/3;
+        justify-self: center;
+    }
+}
+
+/* FOOTER (RESOURCES & SECONDARY NAVIGATION) */
+
+@media screen and (max-width: 600px) {
+    #site-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    #site-info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+
